@@ -10,15 +10,12 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
 			if (trianglesIndexex.indexOf(index1) == -1 &&
 				trianglesIndexex.indexOf(index2) == -1 &&
 				trianglesIndexex.indexOf(index3) == -1 &&
-				index1 >= 0 &&
-				index2 >= 0 &&
-				index3 >= 0 &&
+				//index1 >= 0 &&
+				//index2 >= 0 &&
+				//index3 >= 0 &&
 				index1 != preferences[index1] - 1) {
 
-				if (
-					(preferences[index1] - 1 == index2 && preferences[index2] - 1 == index3 && preferences[index3] - 1 == index1) ||
-					(preferences[index1] - 1 == index3 && preferences[index3] - 1 == index2 && preferences[index2] - 1 == index1)
-					) {
+				if (preferences[preferences[preferences[index1] - 1] - 1] -1 == index1) {
 					triangles++;
 					trianglesIndexex.push(index1);
 					trianglesIndexex.push(index2);
